@@ -1,1 +1,57 @@
-{"nbformat":4,"nbformat_minor":0,"metadata":{"colab":{"provenance":[],"authorship_tag":"ABX9TyPhKnrvYaTJCnUxkFqmFdWg"},"kernelspec":{"name":"python3","display_name":"Python 3"},"language_info":{"name":"python"}},"cells":[{"cell_type":"code","execution_count":null,"metadata":{"colab":{"base_uri":"https://localhost:8080/"},"id":"oX1R3l-DS6rx","outputId":"ea0c7359-a9d1-442a-8658-e72aebc4a27c"},"outputs":[{"output_type":"stream","name":"stdout","text":["kendaraan saya\n","merah\n","=========\n","['beat pop', 'sepeda ontel', 21, 'merah', 2, 25000000, 'metic']\n","=========\n","['beat pop', 'sepeda ontel', 'beat', 21, 'merah', 2, 25000000, 'metic']\n","=========\n","ini adalah program sederhana untuk menghitung luas bangun datar\n","pilih menu angka 1-3 : \n","1. Persegi\n","2. Lingkaran\n","3. Segitiga\n"]}],"source":["# Buat variabel list dengan value : [namaKendaraan, JenisKendaraan, ccKendaraan, warna kendaraan, roda kendaraan]\n","kendaraan = ['beat pop', 'sepeda ontel', 21, 'merah', 2]\n","print('kendaraan saya')\n","print(kendaraan[3])\n","print('=========')\n","\n","# tambahkan dari list tsb di nelakang dengan value : [harga kendaraan, tipe kendaraan]\n","kendaraan.append(25000000)\n","kendaraan.append ('metic')\n","print(kendaraan)\n","print('=========')\n","\n","# tambahkan setelah jenis kendaraan dengan value [merk kendaraan]\n","kendaraan.insert(2, 'beat')\n","print(kendaraan)\n","print(\"=========\")\n","\n","# Buat program python dengan match case untuk menghitung luas bangun datar :\n","#jika pilih 1, maka menghitung luas persegi\n","#jika pilih 2, maka menghitung luas lingkaran\n","#jika pilih 3, maka menghitung luas segitiga\n","#Kalau pilihannya tidak ada maka ada keterangan : salah pilih\n","\n","print('ini adalah program sederhana untuk menghitung luas bangun datar')\n","print('pilih menu angka 1-3 : \\n1. Persegi\\n2. Lingkaran\\n3. Segitiga')\n","pilihmenu = int(input('silahkann pilih menu dengan mengetikan angka 1-3'))\n","\n","match pilihmenu:\n","    # case 1\n","      # proses\n","    case 1:\n","      print('menghitung luas persegi')\n","      sisi = int(input('Silahkan masukan sisi persegi'))\n","      hitung = sisi * sisi\n","      print(f'Luas persegi adalah : {hitung}')\n","\n","    #case 2\n","      # proses\n","    case 2:\n","      print('menghitung luas lingkaran')\n","      r = int(input('masukan nilai jari jari lingkaran'))\n","      hitung = 22/7 * r**2\n","      print(f'Luas lingkaran adalah : {hitung}')\n","\n","    # case 3\n","      # proses\n","    case 3:\n","      print('menghitung luas segitiga')\n","      alas = int(input('Masukan nilai alas'))\n","      tinggi = int(input('Masukan nilai tinggi'))\n","      hitung = 1/2 * alas * tinggi\n","      print(f'Luas Segitiga adalah : {hitung}')\n","    # case akhir\n","      # proses\n","    case _:\n","      print('Pilihan tidak valid, silahkan pilih antara 1-3')"]}]}
+# Buat variabel list dengan value : [namaKendaraan, JenisKendaraan, ccKendaraan, warna kendaraan, roda kendaraan]
+kendaraan = ['beat pop', 'sepeda ontel', 21, 'merah', 2]
+print('kendaraan saya')
+print(kendaraan[3])
+print('=========')
+
+# tambahkan dari list tsb di nelakang dengan value : [harga kendaraan, tipe kendaraan]
+kendaraan.append(25000000)
+kendaraan.append ('metic')
+print(kendaraan)
+print('=========')
+
+# tambahkan setelah jenis kendaraan dengan value [merk kendaraan]
+kendaraan.insert(2, 'beat')
+print(kendaraan)
+print("=========")
+
+
+# Buat program python dengan match case untuk menghitung luas bangun datar : 
+#jika pilih 1, maka menghitung luas persegi 
+#jika pilih 2, maka menghitung luas lingkaran 
+#jika pilih 3, maka menghitung luas segitiga 
+#Kalau pilihannya tidak ada maka ada keterangan : salah pilih
+
+print('ini adalah program sederhana untuk menghitung luas bangun datar')
+print('pilih menu angka 1-3 : \n1. Persegi\n2. Lingkaran\n3. Segitiga')
+pilihmenu = int(input('silahkann pilih menu dengan mengetikan angka 1-3'))
+
+match pilihmenu:
+    # case 1
+      # proses
+    case 1:
+      print('menghitung luas persegi')
+      sisi = int(input('Silahkan masukan sisi persegi'))
+      hitung = sisi * sisi
+      print(f'Luas persegi adalah : {hitung}')
+      
+    #case 2
+      # proses
+    case 2:
+      print('menghitung luas lingkaran')
+      r = int(input('masukan nilai jari jari lingkaran'))
+      hitung = 22/7 * r**2
+      print(f'Luas lingkaran adalah : {hitung}')
+      
+    # case 3  
+      # proses
+    case 3:
+      print('menghitung luas segitiga')
+      alas = int(input('Masukan nilai alas'))
+      tinggi = int(input('Masukan nilai tinggi'))
+      hitung = 1/2 * alas * tinggi
+      print(f'Luas Segitiga adalah : {hitung}')
+    # case akhir
+      # proses
+    case _:
+      print('Pilihan tidak valid, silahkan pilih antara 1-3')
